@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TAMyViewController" customModule="TopAnime" customModuleProvider="target">
+            <connections>
+                <outlet property="cvFavorite" destination="4NL-aU-GRJ" id="RV2-5G-GAA"/>
+                <outlet property="lbTotal" destination="YqP-c6-ThY" id="Axl-6Y-gDM"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ko9-pG-DTb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ltq-yT-PvY">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVD-gV-272">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Cnu-Yr-ccu">
+                                    <rect key="frame" x="12" y="-0.5" width="121" height="32"/>
+                                    <segments>
+                                        <segment title="Anime"/>
+                                        <segment title="Manga"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="segmentChanged:" destination="-1" eventType="valueChanged" id="n0T-Kt-d9E"/>
+                                    </connections>
+                                </segmentedControl>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqP-c6-ThY">
+                                    <rect key="frame" x="368.5" y="8" width="33.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="7Ah-SU-zey"/>
+                                <constraint firstItem="Cnu-Yr-ccu" firstAttribute="centerY" secondItem="fVD-gV-272" secondAttribute="centerY" constant="-2" id="LSk-sP-wZS"/>
+                                <constraint firstItem="YqP-c6-ThY" firstAttribute="centerY" secondItem="fVD-gV-272" secondAttribute="centerY" id="Pub-ZY-rxJ"/>
+                                <constraint firstItem="Cnu-Yr-ccu" firstAttribute="leading" secondItem="fVD-gV-272" secondAttribute="leading" constant="12" id="lxp-yA-LPX"/>
+                                <constraint firstAttribute="trailing" secondItem="YqP-c6-ThY" secondAttribute="trailing" constant="12" id="uJJ-ni-6zH"/>
+                            </constraints>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4NL-aU-GRJ">
+                            <rect key="frame" x="0.0" y="34" width="414" height="784"/>
+                            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="drH-n6-KeP">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ltq-yT-PvY" secondAttribute="bottom" id="2FF-RI-YyN"/>
+                <constraint firstItem="Ltq-yT-PvY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="POw-Ao-AIt"/>
+                <constraint firstItem="Ltq-yT-PvY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lQF-Ev-d9h"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ltq-yT-PvY" secondAttribute="trailing" id="tvh-nR-iNq"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="98"/>
+        </view>
+    </objects>
+</document>

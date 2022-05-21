@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  TopAnime
+
+  Created by Jenny on 2022/5/19.
+  
+*/
+
+"Title:Home" = "Home";
+"Title:My" = "My Favorites";
+"Text:Anime" = "Anime";
+"Text:Manga" = "Manga";
+"Text:Empty" = "Empty!";
+"Text:AddFavorite" = "Add Favorite";
+"Text:RemoveFavorite" = "Remove Favorite";
+"Text:Total" = "Total: %d";
+
+"AlertAction:Confirm" = "Confirm";
+"AlertAction:Cancel" = "Cancel";
+"AlertInfo:AddFavorite" = "Add finish!";
+"AlertInfo:RemoveFavorite" = "Remove finish!";
+"AlertInfo:RemoveAll" = "Remove all favorite %@?";
+"AlertInfo:SystemError" = "Oops, the system encountered a problem";
+
+
+
